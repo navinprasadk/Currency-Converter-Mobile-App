@@ -4,8 +4,8 @@ import { Container } from '../components/Container';
 import { Logo } from '../components/Logo';
 import { InputWithButton } from '../components/TextInput';
 import { ClearButton } from '../components/Button';
-import LastConverted from '../components/Text/LastConverted';
-import Header from '../components/Header/Header';
+import { LastConverted } from '../components/Text';
+import { Header } from '../components/Header';
 
 const TEMP_BASE_CURRENCY = 'USD';
 const TEMP_QUOTE_CURRENCY = 'INR';
