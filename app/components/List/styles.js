@@ -32,5 +32,8 @@ const styles = EStyleSheet.create({
   iconVisible: {
     backgroundColor: '$primaryBlue',
   },
+  checkIcon: {
+    width: 18,
+  },
 });
 export default styles;
