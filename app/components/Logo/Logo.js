@@ -62,17 +62,18 @@ class Logo extends Component {
 
     return (
       <View style={styles.container}>
-        <Animated.ImageBackground
-          resizeMode="contain"
-          style={containerImageStyles}
-          source={require('./images/background.png')}
-        >
+        <Animated.View style={containerImageStyles}>
+          <Animated.Image
+            resizeMode="contain"
+            style={[StyleSheet.absoluteFill, containerImageStyles]}
+            source={require('./images/background.png')}
+          />
           <Animated.Image
             resizeMode="contain"
             style={imageStyles}
             source={require('./images/logo.png')}
           />
-        </Animated.ImageBackground>
+        </Animated.View>
         <Text style={styles.text}>Currency Converter</Text>
       </View>
     );
