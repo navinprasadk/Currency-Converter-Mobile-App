@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
-import { ScrollView, StatusBar, Platform } from 'react-native';
+import { ScrollView, StatusBar, Platform, Linking } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import PropTypes from 'prop-types';
+
 import { ListItem, Separator } from '../components/List';
 
 const ICON_PREFIX = Platform.OS === 'ios' ? 'ios' : 'md';
 const ICON_COLOR = '#868686';
 const ICON_SIZE = 23;
 class Options extends Component {
+  static propTypes = {
+    navigation: PropTypes.object,
+  };
   handleThemesPress = () => {
     console.log('handle themes press');
+    this.props.navigation.navigate('Themes');
   };
   handleSitePress = () => {
     console.log('handle site press');
+    Linking.openURL('httpjjs://fihxer.io/').catch(() => alert('An error occured'));
   };
   render() {
     return (

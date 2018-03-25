@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { StatusBar, KeyboardAvoidingView } from 'react-native';
+import PropTypes from 'prop-types';
+
 import { Container } from '../components/Container';
 import { Logo } from '../components/Logo';
 import { InputWithButton } from '../components/TextInput';
@@ -15,24 +17,21 @@ const TEMP_CONVERSION_RATE = 0.79;
 const TEMP_LAST_CONVERTED = new Date();
 
 export default class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.handlePressBaseCurrency = this.handlePressBaseCurrency.bind(this);
-    this.handlePressQuoteCurrency = this.handlePressQuoteCurrency.bind(this);
-    this.handleTextChange = this.handleTextChange.bind(this);
-    this.handleSwapCurrencies = this.handleSwapCurrency.bind(this);
-    this.handleOptionsPress = this.handleOptionsPress.bind(this);
-  }
+  static propTypes = {
+    navigation: PropTypes.object,
+  };
 
   handlePressBaseCurrency = () => {
     console.log('====================================');
     console.log('handle base currency');
     console.log('====================================');
+    this.props.navigation.navigate('CurrencyList', { title: 'Base Currency' });
   };
   handlePressQuoteCurrency = () => {
     console.log('====================================');
     console.log('handle quote currency');
     console.log('====================================');
+    this.props.navigation.navigate('CurrencyList', { title: 'Quote Currency' });
   };
   handleTextChange = (text) => {
     console.log('====================================');
@@ -48,6 +47,7 @@ export default class Home extends Component {
     console.log('====================================');
     console.log('handle options press');
     console.log('====================================');
+    this.props.navigation.navigate('Options');
   };
 
   render() {
