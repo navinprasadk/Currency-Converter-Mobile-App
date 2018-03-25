@@ -40,10 +40,14 @@ export default class Home extends Component {
     console.log('====================================');
   };
   handleSwapCurrency = () => {
+    console.log('====================================');
     console.log('handle swap currency');
+    console.log('====================================');
   };
   handleOptionsPress = () => {
+    console.log('====================================');
     console.log('handle options press');
+    console.log('====================================');
   };
 
   render() {
