@@ -18,7 +18,7 @@ class Options extends Component {
   };
   handleSitePress = () => {
     console.log('handle site press');
-    Linking.openURL('httpjjs://fihxer.io/').catch(() => alert('An error occured'));
+    Linking.openURL('https://fixer.io/').catch(() => alert('An error occured'));
   };
   render() {
     return (
